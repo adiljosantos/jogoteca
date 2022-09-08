@@ -1,3 +1,3 @@
 # jogoteca
 
-Aplicação de exemplo Flask: crie uma webapp com Python
+Aplicação de exemplo do curso Flask: crie uma webapp com Python da ALURA
