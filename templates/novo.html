@@ -1,32 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jogoteca</title>
-</head>
-<body>
-    <div class="container">
-      <div class="page-header">
-          <h1>{{ titulo }}</h1>
+{% extends "template_base.html" %}
+
+{% block conteudo %}
+</br>
+  <div class="col-lg-12" style="text-align: right;">
+    <a href="javascript:history.back()" class="btn btn-primary" role="button" aria-pressed="true">voltar</a>
+  </div>
+  <form method="POST" action="{{ url_for('criarJogo') }}">
+    <fieldset>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" class="form-control">
       </div>
-      <form action="/criar" method="post">
-        <fieldset>
-          <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="categoria">Categoria</label>
-            <input type="text" id="categoria" name="categoria" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="console">Console</label>
-            <input type="text" id="console" name="console" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
-        </fieldset>
-      </form>
-    </div>
-</body>
-</html>
+      <div class="form-group">
+        <label for="categoria">Categoria</label>
+        <input type="text" id="categoria" name="categoria" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="console">Console</label>
+        <input type="text" id="console" name="console" class="form-control">
+      </div><br>
+        <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+    </fieldset>
+  </form>
+{% endblock%}
